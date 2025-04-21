@@ -28,38 +28,6 @@ class _ConnexionState extends State<Connexion> {
           key: _formKey,
           child: ListView(
             children: [
-              // Champ Nom
-              TextFormField(
-                decoration: const InputDecoration(
-                  labelText: 'Nom',
-                  prefixIcon: Icon(Icons.person),
-                  border: OutlineInputBorder(),
-                ),
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Ce champ est obligatoire';
-                  }
-                  return null;
-                },
-              ),
-              const SizedBox(height: 16),
-
-              // Champ Prenom
-              TextFormField(
-                decoration: const InputDecoration(
-                  labelText: 'Prenom',
-                  prefixIcon: Icon(Icons.person_outline),
-                  border: OutlineInputBorder(),
-                ),
-                validator:
-                    (value) =>
-                        value == null || value.isEmpty
-                            ? 'Entrer votre prénom'
-                            : null,
-                onSaved: (value) => prenom = value!,
-              ),
-              const SizedBox(height: 16),
-
               // Champ Email
               TextFormField(
                 decoration: const InputDecoration(
