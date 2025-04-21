@@ -9,7 +9,7 @@ class Connexion extends StatefulWidget {
 
 class _ConnexionState extends State<Connexion> {
   final _formKey = GlobalKey<FormState>();
-  // final _passwordController = TextEditingController();
+  final _passwordController = TextEditingController();
 
   String nom = '';
   String prenom = '';
@@ -33,7 +33,39 @@ class _ConnexionState extends State<Connexion> {
                   prefixIcon: Icon(Icons.person),
                   border: OutlineInputBorder(),
                 ),
-              )
+              ),
+              const SizedBox(height: 16,),
+
+              // Champ Prenom
+               TextFormField(
+                decoration: const InputDecoration(
+                  labelText: 'Prenom',
+                  prefixIcon: Icon(Icons.person_outline),
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              const SizedBox(height: 16,),
+
+              // Champ Email
+               TextFormField(
+                decoration: const InputDecoration(
+                  labelText: 'Email',
+                  prefixIcon: Icon(Icons.email),
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              const SizedBox(height: 16),
+              
+              // Champ Mot de passe
+              TextFormField(
+                controller: _passwordController,
+                decoration: const InputDecoration(
+                  labelText: 'Mot de passe',
+                  prefixIcon: Icon(Icons.lock),
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              const SizedBox(height: 16),
             ],
           ),
         ),
